@@ -15,7 +15,8 @@ class App extends Component {
   componentDidMount() {
        fetch('http://api.open-notify.org/astros.json')
       .then(resp => resp.json())
-      .then(({people}) =>  this.setState({ people: people }))
+//.then(resp => console.log(resp))
+      .then(resp =>  this.setState({ people: resp.people }))
 
   }
 }
